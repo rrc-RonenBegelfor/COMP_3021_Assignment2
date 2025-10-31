@@ -1,7 +1,10 @@
+---
 name: Bandit
 
 on:
   workflow_dispatch:
+
+permissions: read-all
 
 jobs:
   analyze:
@@ -12,4 +15,4 @@ jobs:
       contents: read
     steps:
       - name: Perform Bandit Analysis
-        uses: PyCQA/bandit-action@v1
+        uses: PyCQA/bandit-action@8a1b30610f61f3f792fe7556e888c9d7dffa52de
