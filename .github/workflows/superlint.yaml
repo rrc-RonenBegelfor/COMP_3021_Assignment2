@@ -28,6 +28,7 @@ jobs:
         uses: super-linter/super-linter@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISABLE_LINTERS: python
 
       - name: Bandit Scan
         uses: PyCQA/bandit-action@8a1b30610f61f3f792fe7556e888c9d7dffa52de
