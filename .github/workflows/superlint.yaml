@@ -5,7 +5,7 @@ on:
   push: null
   pull_request: null
 
-permissions: {}
+permissions: real-all
 
 jobs:
   build:
@@ -28,3 +28,11 @@ jobs:
         uses: super-linter/super-linter@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bandit Scan
+        uses: shundor/bandit-action@v1
+        with:
+          path: "."
+          level: high
+          confidence: high
+          exit_zero: true
