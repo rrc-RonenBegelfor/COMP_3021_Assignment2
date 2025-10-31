@@ -5,7 +5,7 @@ on:
   push: null
   pull_request: null
 
-permissions: real-all
+permissions: read-all
 
 jobs:
   build:
