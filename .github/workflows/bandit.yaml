@@ -7,6 +7,10 @@ on:
 permissions: read-all
 
 jobs:
+  build:
+    name: Bandit
+    runs-on: ubuntu-latest
+
   analyze:
     runs-on: ubuntu-latest
     permissions:
