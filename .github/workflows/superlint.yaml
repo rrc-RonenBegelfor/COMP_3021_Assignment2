@@ -34,6 +34,6 @@ jobs:
         uses: PyCQA/bandit-action@8a1b30610f61f3f792fe7556e888c9d7dffa52de
         with:
           path: "."
-          level: high
-          confidence: high
-          exit_zero: true
+          level: medium
+          confidence: medium
+          exit_zero: false
