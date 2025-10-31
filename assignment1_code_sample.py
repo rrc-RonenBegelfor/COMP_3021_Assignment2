@@ -1,16 +1,16 @@
 """Example script from Assignment 1 to use bandit on."""
 
 import os
-import pymysql
 from urllib.request import urlopen
+import pymysql
 
 db_config = {"host": "mydatabase.com", "user": "admin", "password": "secret123"}
 
 
 def get_user_input():
     """Ask the user for their name and return it."""
-    user_input = input("Enter your name: ")
-    return user_input
+    name_input = input("Enter your name: ")
+    return name_input
 
 
 def send_email(to, subject, body):
@@ -37,7 +37,7 @@ def save_to_db(data):
 
 
 if __name__ == "__main__":
-    """Main entry point of the script."""
+    # Main entry point of the script.
     user_input = get_user_input()
     data = get_data()
     save_to_db(data)
