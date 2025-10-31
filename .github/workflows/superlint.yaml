@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Bandit
-        uses: PyCQA/bandit-action@v1.8.6
+        uses: PyCQA/bandit-action@v1
         with: 
             path: "."
             level: high
