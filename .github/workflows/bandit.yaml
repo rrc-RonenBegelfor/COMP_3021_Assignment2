@@ -9,7 +9,7 @@ permissions: {}
 
 jobs:
   analyze:
-    runs-on:
+    runs-on: ubuntu-latest
     permissions:
       security-events: write
       actions: read
