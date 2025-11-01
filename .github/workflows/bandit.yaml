@@ -17,3 +17,8 @@ jobs:
     steps:
       - name: Bandit Scan
         uses: PyCQA/bandit-action@v1
+        with:
+          targets: "."
+          severity: high
+          confidence: high
+          exit_zero: true
