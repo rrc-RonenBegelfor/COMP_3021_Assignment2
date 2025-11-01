@@ -15,8 +15,8 @@ jobs:
       actions: read
       contents: read
     steps:
-        name: Bandit Scan
-      - uses: mdegis/bandit-action@v1.0
+      - name: Bandit Scan
+        uses: mdegis/bandit-action@v1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           path: "."
