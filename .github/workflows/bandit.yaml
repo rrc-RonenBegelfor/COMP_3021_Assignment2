@@ -1,0 +1,19 @@
+---
+name: Bandit
+
+on:
+  push: null
+  pull_request: null
+
+permissions: {}
+
+jobs:
+  analyze:
+    runs-on:
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    steps:
+      - name: Bandit Scan
+        uses: PyCQA/bandit-action@v1
