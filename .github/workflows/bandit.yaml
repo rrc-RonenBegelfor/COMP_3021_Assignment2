@@ -16,10 +16,8 @@ jobs:
       contents: read
     steps:
       - name: Bandit Scan
-        uses: mdegis/bandit-action@v1.0
+        uses: PyCQA/bandit-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          path: "."
-          level: high
-          confidence: high
-          exit_zero: true
+          targets: "."
+          severity: all
+          confidence: all
