@@ -15,10 +15,10 @@ jobs:
       actions: read
       contents: read
     steps:
-      - name: Bandit Scan
-        uses: PyCQA/bandit-action@v1
+      - uses: mdegis/bandit-action@v1.0
         with:
-          targets: "."
-          severity: high
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: "."
+          level: high
           confidence: high
           exit_zero: true
